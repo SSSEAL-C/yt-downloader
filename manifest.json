@@ -1,0 +1,36 @@
+{
+  "name": "YouTube Downloader",
+  "version": "1.0",
+  "description": "Grabs YouTube Thumbnail and Screenshots through on-player buttons.",
+  "manifest_version":3,
+  "host_permissions": ["https://www.youtube.com/*"],
+  "permissions": ["tabs","storage","scripting","webNavigation"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "run_at": "document_end",
+      "js": ["main.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/icon16.png",
+      "32": "/images/icon32.png",
+      "48": "/images/icon48.png",
+      "64": "/images/icon64.png",
+      "128": "/images/icon128.png",
+      "256": "/images/icon256.png",
+      "512": "/images/icon512.png"
+    }
+  },
+  "icons": {
+    "16": "/images/icon16.png",
+    "32": "/images/icon32.png",
+    "48": "/images/icon48.png",
+    "64": "/images/icon64.png",
+    "128": "/images/icon128.png",
+    "256": "/images/icon256.png",
+    "512": "/images/icon512.png"
+  }
+}
